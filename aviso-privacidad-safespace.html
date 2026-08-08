@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aviso de Privacidad — Safe Space</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0d0d1a;--surface:#13132b;--surface2:#1a1a38;
+  --accent:#7c6ff7;--accent2:#a78bfa;--accent3:#c4b5fd;
+  --text:#e8e6ff;--muted:#8b88b3;--border:rgba(124,111,247,0.2);
+  --success:#6ee7b7;--danger:#f87171;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);
+  line-height:1.65;
+}
+body::before{
+  content:'';position:fixed;top:-30%;left:-20%;width:70%;height:70%;
+  background:radial-gradient(ellipse,rgba(124,111,247,0.1) 0%,transparent 70%);
+  pointer-events:none;z-index:0;
+}
+.wrap{max-width:720px;margin:0 auto;padding:1.8rem 1.5rem 5rem;position:relative;z-index:1;}
+.lang-switch{display:flex;justify-content:center;gap:.5rem;margin-bottom:1.8rem;}
+.lang-btn{
+  background:var(--surface2);border:1px solid var(--border);border-radius:20px;
+  padding:.4rem 1.1rem;font-size:.8rem;font-weight:600;color:var(--muted);
+  cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;
+}
+.lang-btn.active{background:var(--accent);color:white;border-color:var(--accent);}
+header{text-align:center;margin-bottom:2.5rem;}
+.logo{font-size:2.2rem;margin-bottom:.5rem;}
+h1{
+  font-family:'Syne',sans-serif;font-weight:800;font-size:1.6rem;
+  background:linear-gradient(135deg,var(--accent),var(--accent3));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  margin-bottom:.4rem;
+}
+.subtitle{color:var(--muted);font-size:.9rem;}
+.updated{
+  display:inline-block;margin-top:.9rem;font-size:.75rem;color:var(--accent3);
+  background:var(--surface2);border:1px solid var(--border);border-radius:20px;
+  padding:.3rem .9rem;
+}
+.intro{
+  background:var(--surface);border:1px solid var(--border);border-radius:16px;
+  padding:1.2rem 1.3rem;margin-bottom:2rem;font-size:.92rem;color:var(--text);
+}
+section{margin-bottom:2rem;}
+h2{
+  font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem;
+  color:var(--text);margin-bottom:.8rem;display:flex;align-items:center;gap:.5rem;
+}
+h3{
+  font-family:'Syne',sans-serif;font-weight:600;font-size:.92rem;
+  color:var(--accent3);margin:1rem 0 .4rem;
+}
+p{font-size:.9rem;color:var(--muted);margin-bottom:.7rem;}
+ul{margin:.5rem 0 .8rem 1.1rem;}
+li{font-size:.9rem;color:var(--muted);margin-bottom:.4rem;}
+strong{color:var(--text);font-weight:600;}
+.card{
+  background:var(--surface);border:1px solid var(--border);border-radius:14px;
+  padding:1rem 1.2rem;margin:.8rem 0;
+}
+.badge-share{
+  display:inline-flex;align-items:center;gap:.3rem;font-size:.68rem;font-weight:600;
+  background:rgba(167,139,250,0.12);color:var(--accent3);border:1px solid rgba(167,139,250,0.3);
+  border-radius:20px;padding:.15rem .6rem;margin-left:.4rem;vertical-align:middle;
+}
+table{width:100%;border-collapse:collapse;margin:.8rem 0;font-size:.85rem;}
+th{
+  text-align:left;color:var(--accent3);font-weight:600;padding:.5rem .6rem;
+  border-bottom:1px solid var(--border);font-size:.78rem;
+}
+td{padding:.6rem;border-bottom:1px solid var(--border);color:var(--muted);vertical-align:top;}
+td:first-child{color:var(--text);font-weight:500;white-space:nowrap;}
+.crisis-box{
+  background:rgba(248,113,113,0.08);border:1px solid rgba(248,113,113,0.25);
+  border-radius:14px;padding:1rem 1.2rem;margin:.8rem 0;
+}
+.crisis-box p{color:var(--text);}
+footer{
+  text-align:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);
+  font-size:.78rem;color:var(--muted);
+}
+a{color:var(--accent3);}
+[data-lang]{display:none;}
+[data-lang].active-lang{display:block;}
+@media(max-width:480px){
+  .wrap{padding:1.4rem 1.1rem 4rem;}
+  h1{font-size:1.35rem;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="lang-switch">
+    <button class="lang-btn" data-setlang="es" onclick="setLang('es')">🇪🇸 ES</button>
+    <button class="lang-btn" data-setlang="en" onclick="setLang('en')">🇬🇧 EN</button>
+    <button class="lang-btn" data-setlang="fr" onclick="setLang('fr')">🇫🇷 FR</button>
+  </div>
+
+  <!-- ══════════════════════ ESPAÑOL ══════════════════════ -->
+  <div data-lang="es">
+
+    <header>
+      <div class="logo">🛡️</div>
+      <h1>Aviso de Privacidad</h1>
+      <div class="subtitle">Safe Space — Tu lugar seguro, siempre.</div>
+      <div class="updated">Última actualización: agosto de 2026</div>
+    </header>
+
+    <div class="intro">
+      Safe Space fue diseñado con un principio simple: <strong>tu información es tuya</strong>.
+      La mayoría de lo que escribes se queda únicamente en tu dispositivo — no en un
+      servidor nuestro. Este aviso explica, sin letra pequeña, qué guardamos, qué
+      sale de tu dispositivo y por qué, y qué control tienes sobre todo eso.
+    </div>
+
+    <section>
+      <h2>📱 Lo que se queda en tu dispositivo</h2>
+      <p>Lo siguiente <strong>nunca sale de tu teléfono o computadora</strong> — no pasa por ningún servidor nuestro ni de terceros:</p>
+      <div class="card">
+        <ul>
+          <li>Tus entradas del <strong>diario</strong> (texto, estado de ánimo, fechas)</li>
+          <li>Tu lista de <strong>tareas</strong></li>
+          <li>El <strong>historial de tus chats</strong> con el asistente</li>
+          <li>Tu <strong>usuario y contraseña</strong>, si creaste una cuenta (no tenemos una base de datos de usuarios — vive solo en tu dispositivo)</li>
+          <li>Tus preferencias: idioma, tema claro/oscuro, avatar</li>
+          <li>Tu progreso (racha, planta, logros)</li>
+        </ul>
+        <p style="margin-bottom:0;">Todo esto se guarda usando la memoria local del navegador (IndexedDB/localStorage). Si borras los datos del navegador, desinstalas la app, o usas otro dispositivo, <strong>esta información se pierde</strong> — no tenemos forma de recuperarla porque nunca la tuvimos.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>☁️ Lo que sí sale de tu dispositivo (y por qué)</h2>
+      <p>Algunas funciones necesitan conectarse a un servidor para funcionar. Aquí está cada una, exactamente:</p>
+
+      <h3>💬 Mensajes del chat <span class="badge-share">Se envía a terceros</span></h3>
+      <div class="card">
+        <p>Cuando le escribes al asistente, tu mensaje se envía — a través de un servidor intermediario nuestro — a uno de varios proveedores de inteligencia artificial (Google Gemini, Cerebras, Mistral u OpenRouter, dependiendo de cuál esté disponible en ese momento) para generar una respuesta.</p>
+        <p>Estos proveedores procesan el mensaje para responder, pero no lo asociamos a tu nombre real ni a ningún dato identificable — no les mandamos tu usuario, ni tu correo, ni ubicación. Ninguno de los 4 usa tu mensaje para entrenar sus modelos por defecto.</p>
+        <p style="margin-bottom:.5rem;">Cada proveedor tiene su propia política sobre cuánto tiempo conserva el mensaje antes de descartarlo (normalmente solo para detectar uso indebido, no para leerlo por curiosidad):</p>
+        <table style="margin:.3rem 0 0;">
+          <tr><th>Proveedor</th><th>¿Retiene el mensaje?</th></tr>
+          <tr><td>Gemini</td><td>Por tiempo limitado</td></tr>
+          <tr><td>Mistral</td><td>Por tiempo limitado</td></tr>
+          <tr><td>Cerebras</td><td>No — se descarta al instante</td></tr>
+          <tr><td>OpenRouter</td><td>Puede variar</td></tr>
+        </table>
+      </div>
+
+      <h3>🌊 Mensajes en la botella <span class="badge-share">Se comparte con la comunidad</span></h3>
+      <div class="card">
+        <p>Si mandas un mensaje al mar digital, se <strong>cifra en tu dispositivo antes de enviarse</strong> — nuestro servidor nunca ve el texto real, solo un bloque de datos cifrado. Ese mensaje se guarda de forma anónima y puede mostrársele a otras personas que usan la función.</p>
+        <p>Los mensajes se eliminan automáticamente a los <strong>7 días</strong>. También puedes "ocultar" cualquier mensaje que recibas para no volver a verlo, y reportar contenido inapropiado.</p>
+        <p style="margin-bottom:0;"><strong>Importante:</strong> una vez que envías un mensaje a la botella, no puedes recuperarlo, editarlo, ni borrarlo tú mismo — solo desaparece cuando expira.</p>
+      </div>
+
+      <h3>📝 Reportes y comentarios <span class="badge-share">Se envía a nosotros</span></h3>
+      <div class="card">
+        <p style="margin-bottom:0;">Si reportas un mensaje o mandas retroalimentación desde la app, ese texto se envía a un servidor nuestro para que podamos revisarlo. No se comparte con nadie más.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>📋 Resumen rápido</h2>
+      <table>
+        <tr><th>Qué</th><th>¿Dónde vive?</th><th>¿Se comparte?</th></tr>
+        <tr><td>Diario</td><td>Solo tu dispositivo</td><td>Nunca</td></tr>
+        <tr><td>Tareas</td><td>Solo tu dispositivo</td><td>Nunca</td></tr>
+        <tr><td>Chats guardados</td><td>Solo tu dispositivo</td><td>Nunca</td></tr>
+        <tr><td>Usuario/contraseña</td><td>Solo tu dispositivo</td><td>Nunca</td></tr>
+        <tr><td>Mensaje que escribes al chat</td><td>Se procesa y no se guarda en el servidor</td><td>Con el proveedor de IA (sin tu identidad)</td></tr>
+        <tr><td>Mensaje de botella</td><td>Servidor (cifrado)</td><td>Con otros usuarios, de forma anónima</td></tr>
+        <tr><td>Reporte/feedback</td><td>Servidor</td><td>Solo con nosotros</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>🙈 Modo anónimo</h2>
+      <p>Puedes usar Safe Space sin crear ninguna cuenta, tocando "Entrar anónimamente". En ese modo no se te pide ningún dato personal — ni siquiera un usuario. Tu información sigue guardándose localmente en ese dispositivo mientras dure la sesión.</p>
+    </section>
+
+    <section>
+      <h2>🚫 Lo que no hacemos</h2>
+      <ul>
+        <li>No mostramos anuncios ni vendemos tu información a nadie</li>
+        <li>No usamos herramientas de rastreo o análisis de terceros dentro de la app</li>
+        <li>No pedimos tu correo, teléfono, ni ubicación</li>
+        <li>No compartimos tu diario, tareas o chats con nadie — ni siquiera con nosotros, porque nunca llegan a nuestros servidores</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🗑️ Cómo borrar tu información</h2>
+      <p>Como casi todo vive en tu dispositivo, tú tienes el control directo:</p>
+      <ul>
+        <li><strong>Diario, tareas, chats, cuenta:</strong> se borran al limpiar los datos del sitio/app desde la configuración de tu navegador, o al desinstalar la app</li>
+        <li><strong>Un mensaje de botella que ya enviaste:</strong> no se puede borrar de forma inmediata una vez enviado — se elimina automáticamente pasados 7 días</li>
+        <li><strong>Un mensaje de botella que recibiste:</strong> puedes ocultarlo para ti con un toque, en cualquier momento</li>
+      </ul>
+    </section>
+
+    <div class="crisis-box">
+      <h2 style="margin-bottom:.5rem;">💜 Una nota importante</h2>
+      <p style="margin-bottom:0;">Safe Space es un espacio de apoyo, pero no reemplaza la atención de un profesional de salud mental. Si tú o alguien que conoces está pasando por una crisis, por favor busca ayuda de una línea de crisis local o de un adulto de confianza — este aviso de privacidad no cambia esa recomendación.</p>
+    </div>
+
+    <section>
+      <h2>✉️ ¿Preguntas?</h2>
+      <p style="margin-bottom:0;">Si tienes dudas sobre cómo manejamos la información en Safe Space, puedes escribirnos usando la opción de retroalimentación dentro de la propia app.</p>
+    </section>
+
+    <footer>
+      Safe Space — Este aviso puede actualizarse conforme la app evolucione.<br>
+      Revisa esta página de vez en cuando para mantenerte al tanto.
+    </footer>
+
+  </div>
+
+  <!-- ══════════════════════ ENGLISH ══════════════════════ -->
+  <div data-lang="en">
+
+    <header>
+      <div class="logo">🛡️</div>
+      <h1>Privacy Notice</h1>
+      <div class="subtitle">Safe Space — Your safe place, always.</div>
+      <div class="updated">Last updated: August 2026</div>
+    </header>
+
+    <div class="intro">
+      Safe Space was built on one simple principle: <strong>your information belongs to you</strong>.
+      Most of what you write stays only on your device — not on our servers. This
+      notice explains, without fine print, what we store, what leaves your device
+      and why, and what control you have over all of it.
+    </div>
+
+    <section>
+      <h2>📱 What stays on your device</h2>
+      <p>The following <strong>never leaves your phone or computer</strong> — it never passes through any server, ours or anyone else's:</p>
+      <div class="card">
+        <ul>
+          <li>Your <strong>diary</strong> entries (text, mood, dates)</li>
+          <li>Your <strong>task</strong> list</li>
+          <li>Your <strong>chat history</strong> with the assistant</li>
+          <li>Your <strong>username and password</strong>, if you created an account (we don't have a user database — it lives only on your device)</li>
+          <li>Your preferences: language, light/dark theme, avatar</li>
+          <li>Your progress (streak, plant, achievements)</li>
+        </ul>
+        <p style="margin-bottom:0;">All of this is stored using your browser's local storage (IndexedDB/localStorage). If you clear your browser data, uninstall the app, or use another device, <strong>this information is lost</strong> — we have no way to recover it because we never had it.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>☁️ What does leave your device (and why)</h2>
+      <p>Some features need to connect to a server to work. Here is each one, exactly:</p>
+
+      <h3>💬 Chat messages <span class="badge-share">Sent to third parties</span></h3>
+      <div class="card">
+        <p>When you write to the assistant, your message is sent — through an intermediary server of ours — to one of several AI providers (Google Gemini, Cerebras, Mistral, or OpenRouter, depending on which is available at the time) to generate a response.</p>
+        <p>These providers process the message to respond, but we don't link it to your real name or any identifiable data — we don't send them your username, email, or location. None of the 4 use your message to train their models by default.</p>
+        <p style="margin-bottom:.5rem;">Each provider has its own policy on how long it keeps the message before discarding it (usually only to detect misuse, not to read it out of curiosity):</p>
+        <table style="margin:.3rem 0 0;">
+          <tr><th>Provider</th><th>Does it retain the message?</th></tr>
+          <tr><td>Gemini</td><td>Limited time</td></tr>
+          <tr><td>Mistral</td><td>Limited time</td></tr>
+          <tr><td>Cerebras</td><td>No — discarded instantly</td></tr>
+          <tr><td>OpenRouter</td><td>May vary</td></tr>
+        </table>
+      </div>
+
+      <h3>🌊 Bottle messages <span class="badge-share">Shared with the community</span></h3>
+      <div class="card">
+        <p>If you send a message to the digital sea, it's <strong>encrypted on your device before it's sent</strong> — our server never sees the real text, only an encrypted block of data. That message is stored anonymously and may be shown to other people using the feature.</p>
+        <p>Messages are automatically deleted after <strong>7 days</strong>. You can also "hide" any message you receive so you don't see it again, and report inappropriate content.</p>
+        <p style="margin-bottom:0;"><strong>Important:</strong> once you send a message to the bottle, you can't recover it, edit it, or delete it yourself — it only disappears when it expires.</p>
+      </div>
+
+      <h3>📝 Reports and feedback <span class="badge-share">Sent to us</span></h3>
+      <div class="card">
+        <p style="margin-bottom:0;">If you report a message or send feedback from the app, that text is sent to one of our servers so we can review it. It's not shared with anyone else.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>📋 Quick summary</h2>
+      <table>
+        <tr><th>What</th><th>Where does it live?</th><th>Is it shared?</th></tr>
+        <tr><td>Diary</td><td>Only your device</td><td>Never</td></tr>
+        <tr><td>Tasks</td><td>Only your device</td><td>Never</td></tr>
+        <tr><td>Saved chats</td><td>Only your device</td><td>Never</td></tr>
+        <tr><td>Username/password</td><td>Only your device</td><td>Never</td></tr>
+        <tr><td>Message you write to the chat</td><td>Processed, not stored on the server</td><td>With the AI provider (without your identity)</td></tr>
+        <tr><td>Bottle message</td><td>Server (encrypted)</td><td>With other users, anonymously</td></tr>
+        <tr><td>Report/feedback</td><td>Server</td><td>Only with us</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>🙈 Anonymous mode</h2>
+      <p>You can use Safe Space without creating any account, by tapping "Enter anonymously." In that mode we don't ask for any personal data — not even a username. Your information is still stored locally on that device for as long as the session lasts.</p>
+    </section>
+
+    <section>
+      <h2>🚫 What we don't do</h2>
+      <ul>
+        <li>We don't show ads or sell your information to anyone</li>
+        <li>We don't use third-party tracking or analytics tools inside the app</li>
+        <li>We don't ask for your email, phone number, or location</li>
+        <li>We don't share your diary, tasks, or chats with anyone — not even with us, because they never reach our servers</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🗑️ How to delete your information</h2>
+      <p>Since almost everything lives on your device, you have direct control:</p>
+      <ul>
+        <li><strong>Diary, tasks, chats, account:</strong> deleted by clearing the site/app data from your browser settings, or by uninstalling the app</li>
+        <li><strong>A bottle message you already sent:</strong> can't be deleted immediately once sent — it's automatically removed after 7 days</li>
+        <li><strong>A bottle message you received:</strong> you can hide it for yourself with one tap, at any time</li>
+      </ul>
+    </section>
+
+    <div class="crisis-box">
+      <h2 style="margin-bottom:.5rem;">💜 An important note</h2>
+      <p style="margin-bottom:0;">Safe Space is a space for support, but it doesn't replace care from a mental health professional. If you or someone you know is going through a crisis, please reach out to a local crisis line or a trusted adult — this privacy notice doesn't change that recommendation.</p>
+    </div>
+
+    <section>
+      <h2>✉️ Questions?</h2>
+      <p style="margin-bottom:0;">If you have questions about how we handle information in Safe Space, you can write to us using the feedback option inside the app itself.</p>
+    </section>
+
+    <footer>
+      Safe Space — This notice may be updated as the app evolves.<br>
+      Check this page occasionally to stay informed.
+    </footer>
+
+  </div>
+
+  <!-- ══════════════════════ FRANÇAIS ══════════════════════ -->
+  <div data-lang="fr">
+
+    <header>
+      <div class="logo">🛡️</div>
+      <h1>Avis de confidentialité</h1>
+      <div class="subtitle">Safe Space — Ton endroit sûr, toujours.</div>
+      <div class="updated">Dernière mise à jour : août 2026</div>
+    </header>
+
+    <div class="intro">
+      Safe Space a été conçu autour d'un principe simple : <strong>tes informations t'appartiennent</strong>.
+      La plupart de ce que tu écris reste uniquement sur ton appareil — pas sur nos
+      serveurs. Cet avis explique, sans petits caractères, ce que nous conservons,
+      ce qui sort de ton appareil et pourquoi, et quel contrôle tu as sur tout cela.
+    </div>
+
+    <section>
+      <h2>📱 Ce qui reste sur ton appareil</h2>
+      <p>Ce qui suit <strong>ne quitte jamais ton téléphone ou ton ordinateur</strong> — ça ne passe par aucun serveur, ni le nôtre ni celui de quelqu'un d'autre :</p>
+      <div class="card">
+        <ul>
+          <li>Tes entrées de <strong>journal</strong> (texte, humeur, dates)</li>
+          <li>Ta liste de <strong>tâches</strong></li>
+          <li>L'<strong>historique de tes discussions</strong> avec l'assistant</li>
+          <li>Ton <strong>nom d'utilisateur et ton mot de passe</strong>, si tu as créé un compte (nous n'avons pas de base de données d'utilisateurs — ça vit uniquement sur ton appareil)</li>
+          <li>Tes préférences : langue, thème clair/sombre, avatar</li>
+          <li>Ta progression (série, plante, succès)</li>
+        </ul>
+        <p style="margin-bottom:0;">Tout cela est stocké dans la mémoire locale de ton navigateur (IndexedDB/localStorage). Si tu effaces les données de ton navigateur, désinstalles l'application, ou utilises un autre appareil, <strong>cette information est perdue</strong> — nous n'avons aucun moyen de la récupérer car nous ne l'avons jamais eue.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>☁️ Ce qui sort bel et bien de ton appareil (et pourquoi)</h2>
+      <p>Certaines fonctions ont besoin de se connecter à un serveur pour fonctionner. Voici chacune d'elles, exactement :</p>
+
+      <h3>💬 Messages du chat <span class="badge-share">Envoyé à des tiers</span></h3>
+      <div class="card">
+        <p>Quand tu écris à l'assistant, ton message est envoyé — via un serveur intermédiaire à nous — à l'un de plusieurs fournisseurs d'intelligence artificielle (Google Gemini, Cerebras, Mistral ou OpenRouter, selon celui disponible à ce moment-là) pour générer une réponse.</p>
+        <p>Ces fournisseurs traitent le message pour répondre, mais nous ne l'associons à aucun nom réel ni donnée identifiable — nous ne leur envoyons ni ton nom d'utilisateur, ni ton e-mail, ni ta localisation. Aucun des 4 n'utilise ton message pour entraîner ses modèles par défaut.</p>
+        <p style="margin-bottom:.5rem;">Chaque fournisseur a sa propre politique sur la durée pendant laquelle il conserve le message avant de le supprimer (généralement seulement pour détecter les usages abusifs, pas pour le lire par curiosité) :</p>
+        <table style="margin:.3rem 0 0;">
+          <tr><th>Fournisseur</th><th>Conserve-t-il le message ?</th></tr>
+          <tr><td>Gemini</td><td>Temps limité</td></tr>
+          <tr><td>Mistral</td><td>Temps limité</td></tr>
+          <tr><td>Cerebras</td><td>Non — supprimé instantanément</td></tr>
+          <tr><td>OpenRouter</td><td>Peut varier</td></tr>
+        </table>
+      </div>
+
+      <h3>🌊 Messages en bouteille <span class="badge-share">Partagé avec la communauté</span></h3>
+      <div class="card">
+        <p>Si tu envoies un message à la mer numérique, il est <strong>chiffré sur ton appareil avant d'être envoyé</strong> — notre serveur ne voit jamais le texte réel, seulement un bloc de données chiffré. Ce message est stocké de façon anonyme et peut être montré à d'autres personnes utilisant la fonction.</p>
+        <p>Les messages sont automatiquement supprimés au bout de <strong>7 jours</strong>. Tu peux aussi « masquer » tout message que tu reçois pour ne plus le revoir, et signaler du contenu inapproprié.</p>
+        <p style="margin-bottom:0;"><strong>Important :</strong> une fois que tu envoies un message à la bouteille, tu ne peux pas le récupérer, le modifier, ni le supprimer toi-même — il ne disparaît qu'à son expiration.</p>
+      </div>
+
+      <h3>📝 Signalements et retours <span class="badge-share">Envoyé à nous</span></h3>
+      <div class="card">
+        <p style="margin-bottom:0;">Si tu signales un message ou envoies un retour depuis l'application, ce texte est envoyé à l'un de nos serveurs pour que nous puissions l'examiner. Il n'est partagé avec personne d'autre.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>📋 Résumé rapide</h2>
+      <table>
+        <tr><th>Quoi</th><th>Où ça vit ?</th><th>Est-ce partagé ?</th></tr>
+        <tr><td>Journal</td><td>Seulement ton appareil</td><td>Jamais</td></tr>
+        <tr><td>Tâches</td><td>Seulement ton appareil</td><td>Jamais</td></tr>
+        <tr><td>Discussions sauvegardées</td><td>Seulement ton appareil</td><td>Jamais</td></tr>
+        <tr><td>Nom d'utilisateur/mot de passe</td><td>Seulement ton appareil</td><td>Jamais</td></tr>
+        <tr><td>Message que tu écris au chat</td><td>Traité, non stocké sur le serveur</td><td>Avec le fournisseur d'IA (sans ton identité)</td></tr>
+        <tr><td>Message en bouteille</td><td>Serveur (chiffré)</td><td>Avec d'autres utilisateurs, anonymement</td></tr>
+        <tr><td>Signalement/retour</td><td>Serveur</td><td>Seulement avec nous</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>🙈 Mode anonyme</h2>
+      <p>Tu peux utiliser Safe Space sans créer de compte, en appuyant sur « Entrer anonymement ». Dans ce mode, nous ne demandons aucune donnée personnelle — pas même un nom d'utilisateur. Tes informations continuent d'être enregistrées localement sur cet appareil pendant la durée de la session.</p>
+    </section>
+
+    <section>
+      <h2>🚫 Ce que nous ne faisons pas</h2>
+      <ul>
+        <li>Nous n'affichons pas de publicités et ne vendons tes informations à personne</li>
+        <li>Nous n'utilisons pas d'outils de suivi ou d'analyse tiers dans l'application</li>
+        <li>Nous ne demandons ni ton e-mail, ni ton téléphone, ni ta localisation</li>
+        <li>Nous ne partageons ton journal, tes tâches ou tes discussions avec personne — même pas avec nous, car ils n'atteignent jamais nos serveurs</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🗑️ Comment supprimer tes informations</h2>
+      <p>Comme presque tout vit sur ton appareil, tu as un contrôle direct :</p>
+      <ul>
+        <li><strong>Journal, tâches, discussions, compte :</strong> supprimés en effaçant les données du site/de l'application depuis les paramètres de ton navigateur, ou en désinstallant l'application</li>
+        <li><strong>Un message en bouteille déjà envoyé :</strong> ne peut pas être supprimé immédiatement une fois envoyé — il est automatiquement retiré après 7 jours</li>
+        <li><strong>Un message en bouteille reçu :</strong> tu peux le masquer pour toi-même en un geste, à tout moment</li>
+      </ul>
+    </section>
+
+    <div class="crisis-box">
+      <h2 style="margin-bottom:.5rem;">💜 Une note importante</h2>
+      <p style="margin-bottom:0;">Safe Space est un espace de soutien, mais ne remplace pas les soins d'un professionnel de la santé mentale. Si toi ou quelqu'un que tu connais traverse une crise, contacte s'il te plaît une ligne de crise locale ou un adulte de confiance — cet avis de confidentialité ne change pas cette recommandation.</p>
+    </div>
+
+    <section>
+      <h2>✉️ Des questions ?</h2>
+      <p style="margin-bottom:0;">Si tu as des questions sur la façon dont nous gérons les informations dans Safe Space, tu peux nous écrire en utilisant l'option de retour à l'intérieur de l'application elle-même.</p>
+    </section>
+
+    <footer>
+      Safe Space — Cet avis peut être mis à jour à mesure que l'application évolue.<br>
+      Consulte cette page de temps en temps pour rester informé.
+    </footer>
+
+  </div>
+
+</div>
+
+<script>
+function setLang(lang){
+  document.querySelectorAll('[data-lang]').forEach(function(el){
+    el.classList.toggle('active-lang', el.getAttribute('data-lang') === lang);
+  });
+  document.querySelectorAll('.lang-btn').forEach(function(btn){
+    btn.classList.toggle('active', btn.getAttribute('data-setlang') === lang);
+  });
+  document.documentElement.setAttribute('lang', lang);
+  try{ localStorage.setItem('ss_privacy_lang', lang); }catch(e){}
+}
+(function(){
+  let initial = 'es';
+  try{
+    const saved = localStorage.getItem('ss_privacy_lang');
+    if(saved) initial = saved;
+    else{
+      const nav = (navigator.language || 'es').slice(0,2);
+      if(['es','en','fr'].includes(nav)) initial = nav;
+    }
+  }catch(e){}
+  setLang(initial);
+})();
+</script>
+
+</body>
+</html>
