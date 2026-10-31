@@ -112,7 +112,7 @@ a{color:var(--accent3);}
       <div class="logo">🛡️</div>
       <h1>Aviso de Privacidad</h1>
       <div class="subtitle">Safe Space — Tu lugar seguro, siempre.</div>
-      <div class="updated">Última actualización: octubre de 2026</div>
+      <div class="updated">Última actualización: 31 de octubre de 2026</div>
     </header>
 
     <div class="intro">
@@ -143,7 +143,7 @@ a{color:var(--accent3);}
           <li>Tu <strong>PIN</strong>, si activaste uno. Se guarda protegido, nunca tal cual.</li>
           <li>Tus preferencias (idioma, tema, avatar) y tu progreso (racha, planta, logros)</li>
         </ul>
-        <p style="margin-bottom:0;">Todo esto vive en la memoria local del navegador (IndexedDB/localStorage). Si borras los datos del navegador o de la app, la desinstalas, o cambias de dispositivo, <strong>esta información se pierde</strong>. No podemos recuperarla porque nunca la tuvimos. Te recomendamos hacer copias de seguridad desde Ajustes.</p>
+        <p style="margin-bottom:0;">Todo esto vive en la memoria local de la app (IndexedDB/localStorage). Si borras los datos del navegador o de la app, la desinstalas, o cambias de dispositivo, <strong>esta información se pierde</strong>. No podemos recuperarla porque nunca la tuvimos. Te recomendamos hacer copias de seguridad desde Ajustes.</p>
       </div>
     </section>
 
@@ -159,7 +159,7 @@ a{color:var(--accent3);}
           <li>los mensajes recientes de esa conversación y un resumen breve de los anteriores,</li>
           <li>un contexto pequeño para personalizar la respuesta: tu estado de ánimo más frecuente, cuántas entradas tienes en el diario (no su contenido), temas frecuentes, el nivel de tu planta y cuántos pomodoros hiciste esta semana.</li>
         </ul>
-        <p><strong>No enviamos</strong> tu usuario, tu nombre, tu correo, tu ubicación ni el texto de tu diario. Nuestro servidor intermediario no guarda los mensajes.</p>
+        <p><strong>No enviamos</strong> tu usuario, tu nombre, tu correo, tu ubicación ni el texto de tu diario. Nuestro servidor intermediario no guarda los mensajes. Con cada mensaje sí va un identificador anónimo, explicado más abajo.</p>
         <p>Cada proveedor tiene sus propias reglas: según el proveedor y el tipo de cuenta, pueden conservar los mensajes por un tiempo para detectar abusos y, en algunos casos, usarlos para mejorar sus servicios. Por eso te pedimos <strong>no escribir datos que te identifiquen</strong> (nombre completo, dirección, teléfono, escuela).</p>
         <p><strong>Datos sensibles y tu consentimiento:</strong> lo que escribes en el chat puede incluir información sobre tu salud emocional o mental, que la ley considera un <strong>dato personal sensible</strong>. Por eso, antes de tu primer mensaje al asistente, la app te pide tu <strong>consentimiento expreso</strong> marcando una casilla. Si no aceptas, el chat funciona con respuestas preparadas dentro de la app y nada de lo que escribes se envía a la inteligencia artificial. Puedes dar o retirar tu consentimiento cuando quieras en <strong>Ajustes → Chat con IA</strong>.</p>
         <p style="margin-bottom:0;">Si un mensaje sugiere que estás en peligro, la app responde por su cuenta con líneas de ayuda, <strong>sin enviarlo a la inteligencia artificial</strong>.</p>
@@ -167,7 +167,7 @@ a{color:var(--accent3);}
 
       <h3>🎤 Dictado por voz <span class="badge-share">Se envía a terceros</span></h3>
       <div class="card">
-        <p style="margin-bottom:0;">Si usas el micrófono para dictar en el chat, tu navegador (Chrome) envía el audio a Google para convertirlo en texto. Es opcional: si prefieres que no salga tu voz, escribe en lugar de dictar. Las <strong>notas de voz del diario</strong> son distintas: se graban y se quedan solo en tu dispositivo.</p>
+        <p style="margin-bottom:0;">Si usas el micrófono para dictar en el chat, el servicio de voz de Google de tu teléfono o navegador envía el audio a Google para convertirlo en texto. Es opcional: si prefieres que no salga tu voz, escribe en lugar de dictar. Las <strong>notas de voz del diario</strong> son distintas: se graban y se quedan solo en tu dispositivo.</p>
       </div>
 
       <h3>🧘 Voces de las meditaciones <span class="badge-share">Puede enviarse a terceros</span></h3>
@@ -192,16 +192,33 @@ a{color:var(--accent3);}
         <p style="margin-bottom:0;">Para saber si las protecciones funcionan, la app nos envía conteos anónimos de algunos eventos, por ejemplo "se bloqueó una botella" o "se desvió una botella al chat". No incluyen el texto del mensaje, tu usuario ni nada que te identifique.</p>
       </div>
 
+      <h3>🔢 Identificador anónimo y límites de uso <span class="badge-share">Se envía a nosotros</span></h3>
+      <div class="card">
+        <p>Para evitar abusos y mantener el chat gratis, la app crea en tu dispositivo un <strong>identificador anónimo al azar</strong>. No es tu nombre, tu correo ni el identificador de publicidad de tu teléfono. Se envía junto con cada mensaje al asistente para contar cuántos mensajes manda ese dispositivo al día y por minuto.</p>
+        <p style="margin-bottom:0;">Nuestro servidor <strong>no guarda ese identificador tal cual</strong>: guarda solo un resumen cifrado (hash) y un contador. Lo mismo hace con tu dirección IP, para limitar cuántos mensajes y comentarios puede enviar una misma conexión al día. Estos contadores se borran solos después de unos días y no se usan para nada más.</p>
+      </div>
+
+      <h3>✉️ Carta semanal del compañero <span class="badge-share">Se envía a terceros</span></h3>
+      <div class="card">
+        <p style="margin-bottom:0;">Si compraste la carta semanal, una vez por semana la app envía al proveedor de IA un <strong>resumen de tu semana</strong> para escribirla: cuántas entradas escribiste en el diario, tu emoción más frecuente, tu ánimo promedio (de 0 a 5), algunas palabras de los temas de los que más hablaste, tus sesiones de enfoque y los puntos de tu planta. <strong>Nunca se envía el texto de tu diario.</strong> Solo se usa la IA si diste tu consentimiento para el chat con IA; si no, la carta se escribe dentro de la app.</p>
+      </div>
+
+      <h3>🔔 Recordatorios <span class="badge-share">Solo en tu dispositivo</span></h3>
+      <div class="card">
+        <p style="margin-bottom:0;">Los avisos del Pomodoro, de tus cartas al futuro y el recordatorio diario se programan dentro de tu teléfono. No pasan por ningún servidor.</p>
+      </div>
+
       <h3>💛 SafeSpace+ <span class="badge-share">Compra opcional</span></h3>
       <div class="card">
-        <p>Lo esencial de Safe Space (diario, tareas, chat, botellas, detección de crisis y meditaciones básicas) siempre es gratis y sin límites. <strong>SafeSpace+</strong> es una suscripción opcional con extras, como personalizar a tu compañero de chat, notas de voz y fotos en el diario, temas y sonidos adicionales.</p>
+        <p>Lo esencial de Safe Space (diario, tareas, chat, botellas, detección de crisis y meditaciones básicas) siempre es gratis. El chat con IA tiene un límite diario amplio, igual para todos, para evitar abusos. <strong>SafeSpace+</strong> es una suscripción opcional con extras, como personalizar a tu compañero de chat, notas de voz y fotos en el diario, temas y sonidos adicionales.</p>
         <p>Puedes probarla gratis 7 días (una sola vez); la prueba se activa solo en tu dispositivo. Los planes de pago (1, 3, 6 o 12 meses) se compran desde la app instalada con Google Play y son <strong>prepago, sin renovación automática</strong>.</p>
+        <p>También hay <strong>compras únicas</strong> opcionales, como la carta semanal del compañero o escenas para decorar tu jardín. Se pagan con Google Play de la misma forma.</p>
         <p style="margin-bottom:0;">Google Play procesa el pago y nos entrega un código de compra que verificamos en nuestro servidor para activar los extras. Nunca vemos ni guardamos tus datos de pago; eso lo maneja Google.</p>
       </div>
 
       <h3>🧩 Servicios técnicos</h3>
       <div class="card">
-        <p style="margin-bottom:0;">La página y la app cargan tipografías desde Google Fonts, y nuestros servidores funcionan en Cloudflare. Como cualquier sitio web, estos servicios reciben datos técnicos de la conexión (por ejemplo, tu dirección IP) para poder entregar el contenido. No los usamos para identificarte ni para seguirte.</p>
+        <p style="margin-bottom:0;">Nuestros servidores funcionan en Cloudflare. Las tipografías vienen incluidas dentro de la app, así que la app no se conecta a Google Fonts (esta página web sí las carga desde ahí). Como cualquier servicio en internet, estos servicios reciben datos técnicos de la conexión (por ejemplo, tu dirección IP) para poder entregar el contenido. No los usamos para identificarte ni para seguirte.</p>
       </div>
     </section>
 
@@ -213,6 +230,7 @@ a{color:var(--accent3);}
         <li>Revisar reportes y comentarios para mejorar la app</li>
         <li>Verificar compras de SafeSpace+</li>
         <li>Saber, con conteos anónimos, si las protecciones funcionan</li>
+        <li>Evitar abusos con límites de uso del chat y de los comentarios</li>
       </ul>
       <p style="margin-bottom:0;">No usamos tus datos para publicidad, mercadotecnia ni perfiles comerciales.</p>
     </section>
@@ -250,6 +268,9 @@ a{color:var(--accent3);}
         <tr><td>Mensaje de botella</td><td>Nuestro servidor, 7 días</td><td>Público para otros usuarios, sin tu nombre</td></tr>
         <tr><td>Reportes y comentarios</td><td>Nuestro servidor</td><td>Solo con nosotros</td></tr>
         <tr><td>Conteos anónimos</td><td>Nuestro servidor</td><td>Solo con nosotros</td></tr>
+        <tr><td>Identificador anónimo del dispositivo</td><td>Nuestro servidor, solo como resumen cifrado (hash), unos días</td><td>Con nadie</td></tr>
+        <tr><td>Resumen semanal (carta del compañero)</td><td>No se guarda en nuestro servidor</td><td>Con el proveedor de IA, sin el texto de tu diario</td></tr>
+        <tr><td>Recordatorios</td><td>Solo tu dispositivo</td><td>Nunca</td></tr>
         <tr><td>SafeSpace+</td><td>Google Play</td><td>Código de compra con nuestro servidor, nunca tus datos de pago</td></tr>
       </table>
     </section>
@@ -266,6 +287,7 @@ a{color:var(--accent3);}
         <li>No mostramos anuncios</li>
         <li>No usamos herramientas de rastreo o análisis de terceros</li>
         <li>No pedimos tu correo, teléfono ni ubicación</li>
+        <li>No usamos el identificador de publicidad de tu teléfono</li>
         <li>No subimos tu diario, tus tareas ni tu historial guardado a ningún servidor</li>
       </ul>
     </section>
@@ -285,7 +307,7 @@ a{color:var(--accent3);}
       <h2>🗑️ Cómo borrar tu información</h2>
       <ul>
         <li><strong>Todo lo de tu dispositivo, de una vez:</strong> en Safe Space, ve a <strong>Ajustes → Eliminar mis datos</strong> y confirma. También puedes borrar los datos de la app desde la configuración de tu navegador o desinstalándola.</li>
-        <li><strong>Copias de seguridad:</strong> el archivo que exportas contiene todo tu diario y no está protegido con contraseña. Guárdalo en un lugar seguro y bórralo cuando ya no lo necesites.</li>
+        <li><strong>Copias de seguridad:</strong> el archivo que exportas se guarda en la carpeta Descargas de tu teléfono, contiene todo tu diario y no está protegido con contraseña. Guárdalo en un lugar seguro y bórralo cuando ya no lo necesites.</li>
         <li><strong>Una botella que enviaste:</strong> se elimina sola a los 7 días.</li>
         <li><strong>Una botella que recibiste:</strong> puedes ocultarla con un toque.</li>
       </ul>
@@ -296,7 +318,7 @@ a{color:var(--accent3);}
       <ul>
         <li>Todas las conexiones viajan cifradas (HTTPS).</li>
         <li>Tu contraseña y tu PIN se guardan protegidos, nunca tal cual.</li>
-        <li>Puedes activar un PIN para que nadie abra la app sin él.</li>
+        <li>Puedes activar un PIN o tu huella para que nadie abra la app sin ti. Si sales de la app unos minutos, se vuelve a bloquear sola.</li>
         <li>Los servidores intermediarios no guardan tus mensajes del chat.</li>
       </ul>
     </section>
@@ -331,7 +353,7 @@ a{color:var(--accent3);}
       <div class="logo">🛡️</div>
       <h1>Privacy Notice</h1>
       <div class="subtitle">Safe Space — Your safe place, always.</div>
-      <div class="updated">Last updated: October 2026</div>
+      <div class="updated">Last updated: October 31, 2026</div>
     </header>
 
     <div class="intro">
@@ -361,7 +383,7 @@ a{color:var(--accent3);}
           <li>Your <strong>PIN</strong>, if you set one. It is stored protected, never as is.</li>
           <li>Your preferences (language, theme, avatar) and your progress (streak, plant, achievements)</li>
         </ul>
-        <p style="margin-bottom:0;">All of this lives in your browser's local storage (IndexedDB/localStorage). If you clear your browser or app data, uninstall the app, or switch devices, <strong>this information is lost</strong>. We can't recover it because we never had it. We recommend making backups from Settings.</p>
+        <p style="margin-bottom:0;">All of this lives in the app's local storage (IndexedDB/localStorage). If you clear your browser or app data, uninstall the app, or switch devices, <strong>this information is lost</strong>. We can't recover it because we never had it. We recommend making backups from Settings.</p>
       </div>
     </section>
 
@@ -377,7 +399,7 @@ a{color:var(--accent3);}
           <li>the recent messages in that conversation and a short summary of earlier ones,</li>
           <li>a small context to personalize the reply: your most frequent mood, how many diary entries you have (not their content), frequent topics, your plant level and how many pomodoros you did this week.</li>
         </ul>
-        <p>We <strong>do not send</strong> your username, name, email, location or diary text. Our intermediary server does not store the messages.</p>
+        <p>We <strong>do not send</strong> your username, name, email, location or diary text. Our intermediary server does not store the messages. Each message does carry an anonymous identifier, explained below.</p>
         <p>Each provider has its own rules: depending on the provider and the type of account, they may keep messages for a while to detect abuse and, in some cases, use them to improve their services. That's why we ask you <strong>not to write details that identify you</strong> (full name, address, phone number, school).</p>
         <p><strong>Sensitive data and your consent:</strong> what you write in the chat may include information about your emotional or mental health, which the law treats as <strong>sensitive personal data</strong>. That is why, before your first message to the assistant, the app asks for your <strong>express consent</strong> by ticking a box. If you don't accept, the chat works with ready-made replies inside the app and nothing you write is sent to the AI. You can give or withdraw your consent anytime in <strong>Settings → AI chat</strong>.</p>
         <p style="margin-bottom:0;">If a message suggests you may be in danger, the app replies on its own with helplines, <strong>without sending it to the AI</strong>.</p>
@@ -385,7 +407,7 @@ a{color:var(--accent3);}
 
       <h3>🎤 Voice typing <span class="badge-share">Sent to third parties</span></h3>
       <div class="card">
-        <p style="margin-bottom:0;">If you use the microphone to dictate in the chat, your browser (Chrome) sends the audio to Google to turn it into text. It's optional: if you'd rather your voice not leave your device, type instead. <strong>Diary voice notes</strong> are different: they are recorded and stay only on your device.</p>
+        <p style="margin-bottom:0;">If you use the microphone to dictate in the chat, Google's speech service on your phone or browser sends the audio to Google to turn it into text. It's optional: if you'd rather your voice not leave your device, type instead. <strong>Diary voice notes</strong> are different: they are recorded and stay only on your device.</p>
       </div>
 
       <h3>🧘 Meditation voices <span class="badge-share">May be sent to third parties</span></h3>
@@ -410,16 +432,33 @@ a{color:var(--accent3);}
         <p style="margin-bottom:0;">To know whether our protections work, the app sends us anonymous counts of some events, for example "a bottle was blocked" or "a bottle was redirected to the chat". They don't include the message text, your username or anything that identifies you.</p>
       </div>
 
+      <h3>🔢 Anonymous identifier and usage limits <span class="badge-share">Sent to us</span></h3>
+      <div class="card">
+        <p>To prevent abuse and keep the chat free, the app creates a <strong>random anonymous identifier</strong> on your device. It is not your name, your email or your phone's advertising ID. It is sent with each message to the assistant so we can count how many messages that device sends per day and per minute.</p>
+        <p style="margin-bottom:0;">Our server <strong>does not store that identifier as is</strong>: it keeps only an encrypted summary (a hash) and a counter. It does the same with your IP address, to limit how many messages and feedback items one connection can send per day. These counters delete themselves after a few days and are not used for anything else.</p>
+      </div>
+
+      <h3>✉️ Weekly companion letter <span class="badge-share">Sent to third parties</span></h3>
+      <div class="card">
+        <p style="margin-bottom:0;">If you bought the weekly letter, once a week the app sends the AI provider a <strong>summary of your week</strong> to write it: how many diary entries you wrote, your most frequent emotion, your average mood (0 to 5), a few words about the topics you talked about most, your focus sessions and your plant's points. <strong>Your diary text is never sent.</strong> The AI is used only if you gave consent for the AI chat; otherwise the letter is written inside the app.</p>
+      </div>
+
+      <h3>🔔 Reminders <span class="badge-share">Only on your device</span></h3>
+      <div class="card">
+        <p style="margin-bottom:0;">Pomodoro alerts, future-letter alerts and the daily reminder are scheduled inside your phone. They don't go through any server.</p>
+      </div>
+
       <h3>💛 SafeSpace+ <span class="badge-share">Optional purchase</span></h3>
       <div class="card">
-        <p>The essentials of Safe Space (diary, tasks, chat, bottles, crisis detection and basic meditations) are always free and unlimited. <strong>SafeSpace+</strong> is an optional subscription with extras, such as customizing your chat companion, voice notes and photos in the diary, and extra themes and sounds.</p>
+        <p>The essentials of Safe Space (diary, tasks, chat, bottles, crisis detection and basic meditations) are always free. The AI chat has a generous daily limit, the same for everyone, to prevent abuse. <strong>SafeSpace+</strong> is an optional subscription with extras, such as customizing your chat companion, voice notes and photos in the diary, and extra themes and sounds.</p>
         <p>You can try it free for 7 days (once); the trial is activated only on your device. Paid plans (1, 3, 6 or 12 months) are bought from the app installed through Google Play and are <strong>prepaid, with no auto-renewal</strong>.</p>
+        <p>There are also optional <strong>one-time purchases</strong>, such as the weekly companion letter or scenes to decorate your garden. They are paid through Google Play the same way.</p>
         <p style="margin-bottom:0;">Google Play processes the payment and gives us a purchase code that we verify on our server to activate the extras. We never see or store your payment details; Google handles that.</p>
       </div>
 
       <h3>🧩 Technical services</h3>
       <div class="card">
-        <p style="margin-bottom:0;">This page and the app load fonts from Google Fonts, and our servers run on Cloudflare. Like any website, these services receive technical connection data (for example, your IP address) in order to deliver content. We don't use it to identify or track you.</p>
+        <p style="margin-bottom:0;">Our servers run on Cloudflare. Fonts are bundled inside the app, so the app does not connect to Google Fonts (this web page does load them from there). Like any online service, these services receive technical connection data (for example, your IP address) in order to deliver content. We don't use it to identify or track you.</p>
       </div>
     </section>
 
@@ -431,6 +470,7 @@ a{color:var(--accent3);}
         <li>Reviewing reports and feedback to improve the app</li>
         <li>Verifying SafeSpace+ purchases</li>
         <li>Knowing, through anonymous counts, whether protections work</li>
+        <li>Preventing abuse with usage limits on the chat and feedback</li>
       </ul>
       <p style="margin-bottom:0;">We don't use your data for advertising, marketing or commercial profiling.</p>
     </section>
@@ -468,6 +508,9 @@ a{color:var(--accent3);}
         <tr><td>Bottle message</td><td>Our server, 7 days</td><td>Public to other users, without your name</td></tr>
         <tr><td>Reports and feedback</td><td>Our server</td><td>Only with us</td></tr>
         <tr><td>Anonymous counts</td><td>Our server</td><td>Only with us</td></tr>
+        <tr><td>Anonymous device identifier</td><td>Our server, only as an encrypted summary (hash), for a few days</td><td>With no one</td></tr>
+        <tr><td>Weekly summary (companion letter)</td><td>Not stored on our server</td><td>With the AI provider, without your diary text</td></tr>
+        <tr><td>Reminders</td><td>Only your device</td><td>Never</td></tr>
         <tr><td>SafeSpace+</td><td>Google Play</td><td>Purchase code with our server, never your payment details</td></tr>
       </table>
     </section>
@@ -484,6 +527,7 @@ a{color:var(--accent3);}
         <li>We don't show ads</li>
         <li>We don't use third-party tracking or analytics tools</li>
         <li>We don't ask for your email, phone number or location</li>
+        <li>We don't use your phone's advertising ID</li>
         <li>We don't upload your diary, tasks or saved history to any server</li>
       </ul>
     </section>
@@ -503,7 +547,7 @@ a{color:var(--accent3);}
       <h2>🗑️ How to delete your information</h2>
       <ul>
         <li><strong>Everything on your device, at once:</strong> in Safe Space, go to <strong>Settings → Delete my data</strong> and confirm. You can also clear the app's data from your browser settings or by uninstalling it.</li>
-        <li><strong>Backups:</strong> the file you export contains your whole diary and is not password-protected. Keep it somewhere safe and delete it when you no longer need it.</li>
+        <li><strong>Backups:</strong> the file you export is saved to your phone's Downloads folder, contains your whole diary and is not password-protected. Keep it somewhere safe and delete it when you no longer need it.</li>
         <li><strong>A bottle you sent:</strong> deleted automatically after 7 days.</li>
         <li><strong>A bottle you received:</strong> you can hide it with one tap.</li>
       </ul>
@@ -514,7 +558,7 @@ a{color:var(--accent3);}
       <ul>
         <li>All connections are encrypted (HTTPS).</li>
         <li>Your password and PIN are stored protected, never as is.</li>
-        <li>You can turn on a PIN so no one can open the app without it.</li>
+        <li>You can turn on a PIN or your fingerprint so no one can open the app without you. If you leave the app for a few minutes, it locks again by itself.</li>
         <li>Our intermediary servers don't store your chat messages.</li>
       </ul>
     </section>
@@ -549,7 +593,7 @@ a{color:var(--accent3);}
       <div class="logo">🛡️</div>
       <h1>Avis de confidentialité</h1>
       <div class="subtitle">Safe Space — Ton endroit sûr, toujours.</div>
-      <div class="updated">Dernière mise à jour : octobre 2026</div>
+      <div class="updated">Dernière mise à jour : 31 octobre 2026</div>
     </header>
 
     <div class="intro">
@@ -579,7 +623,7 @@ a{color:var(--accent3);}
           <li>Ton <strong>code PIN</strong>, si tu en as activé un. Il est enregistré protégé, jamais tel quel.</li>
           <li>Tes préférences (langue, thème, avatar) et ta progression (série, plante, succès)</li>
         </ul>
-        <p style="margin-bottom:0;">Tout cela vit dans la mémoire locale de ton navigateur (IndexedDB/localStorage). Si tu effaces les données du navigateur ou de l'application, la désinstalles ou changes d'appareil, <strong>ces informations sont perdues</strong>. Nous ne pouvons pas les récupérer car nous ne les avons jamais eues. Nous te conseillons de faire des sauvegardes depuis les Paramètres.</p>
+        <p style="margin-bottom:0;">Tout cela vit dans la mémoire locale de l'application (IndexedDB/localStorage). Si tu effaces les données du navigateur ou de l'application, la désinstalles ou changes d'appareil, <strong>ces informations sont perdues</strong>. Nous ne pouvons pas les récupérer car nous ne les avons jamais eues. Nous te conseillons de faire des sauvegardes depuis les Paramètres.</p>
       </div>
     </section>
 
@@ -595,7 +639,7 @@ a{color:var(--accent3);}
           <li>les messages récents de cette discussion et un court résumé des précédents,</li>
           <li>un petit contexte pour personnaliser la réponse : ton humeur la plus fréquente, combien d'entrées tu as dans ton journal (pas leur contenu), tes sujets fréquents, le niveau de ta plante et le nombre de pomodoros de la semaine.</li>
         </ul>
-        <p>Nous <strong>n'envoyons pas</strong> ton nom d'utilisateur, ton nom, ton e-mail, ta localisation ni le texte de ton journal. Notre serveur intermédiaire ne conserve pas les messages.</p>
+        <p>Nous <strong>n'envoyons pas</strong> ton nom d'utilisateur, ton nom, ton e-mail, ta localisation ni le texte de ton journal. Notre serveur intermédiaire ne conserve pas les messages. Chaque message porte en revanche un identifiant anonyme, expliqué plus bas.</p>
         <p>Chaque fournisseur a ses propres règles : selon le fournisseur et le type de compte, ils peuvent conserver les messages un certain temps pour détecter les abus et, dans certains cas, les utiliser pour améliorer leurs services. C'est pourquoi nous te demandons de <strong>ne pas écrire d'informations qui t'identifient</strong> (nom complet, adresse, téléphone, école).</p>
         <p><strong>Données sensibles et ton consentement :</strong> ce que tu écris dans la discussion peut inclure des informations sur ta santé émotionnelle ou mentale, que la loi considère comme des <strong>données personnelles sensibles</strong>. C'est pourquoi, avant ton premier message à l'assistant, l'application te demande ton <strong>consentement exprès</strong> en cochant une case. Si tu n'acceptes pas, la discussion fonctionne avec des réponses préparées dans l'application et rien de ce que tu écris n'est envoyé à l'intelligence artificielle. Tu peux donner ou retirer ton consentement à tout moment dans <strong>Paramètres → Chat avec IA</strong>.</p>
         <p style="margin-bottom:0;">Si un message laisse penser que tu es en danger, l'application répond elle-même avec des lignes d'aide, <strong>sans l'envoyer à l'intelligence artificielle</strong>.</p>
@@ -603,7 +647,7 @@ a{color:var(--accent3);}
 
       <h3>🎤 Dictée vocale <span class="badge-share">Envoyé à des tiers</span></h3>
       <div class="card">
-        <p style="margin-bottom:0;">Si tu utilises le micro pour dicter dans la discussion, ton navigateur (Chrome) envoie l'audio à Google pour le transformer en texte. C'est facultatif : si tu préfères que ta voix ne sorte pas de ton appareil, écris plutôt. Les <strong>notes vocales du journal</strong> sont différentes : elles sont enregistrées et restent uniquement sur ton appareil.</p>
+        <p style="margin-bottom:0;">Si tu utilises le micro pour dicter dans la discussion, le service vocal de Google de ton téléphone ou navigateur envoie l'audio à Google pour le transformer en texte. C'est facultatif : si tu préfères que ta voix ne sorte pas de ton appareil, écris plutôt. Les <strong>notes vocales du journal</strong> sont différentes : elles sont enregistrées et restent uniquement sur ton appareil.</p>
       </div>
 
       <h3>🧘 Voix des méditations <span class="badge-share">Peut être envoyé à des tiers</span></h3>
@@ -628,16 +672,33 @@ a{color:var(--accent3);}
         <p style="margin-bottom:0;">Pour savoir si nos protections fonctionnent, l'application nous envoie des comptages anonymes de certains événements, par exemple « une bouteille a été bloquée » ou « une bouteille a été redirigée vers la discussion ». Ils n'incluent ni le texte du message, ni ton nom d'utilisateur, ni rien qui t'identifie.</p>
       </div>
 
+      <h3>🔢 Identifiant anonyme et limites d'utilisation <span class="badge-share">Envoyé à nous</span></h3>
+      <div class="card">
+        <p>Pour éviter les abus et garder la discussion gratuite, l'application crée sur ton appareil un <strong>identifiant anonyme aléatoire</strong>. Ce n'est ni ton nom, ni ton e-mail, ni l'identifiant publicitaire de ton téléphone. Il est envoyé avec chaque message à l'assistant pour compter combien de messages cet appareil envoie par jour et par minute.</p>
+        <p style="margin-bottom:0;">Notre serveur <strong>ne conserve pas cet identifiant tel quel</strong> : il garde seulement un résumé chiffré (un hash) et un compteur. Il fait de même avec ton adresse IP, pour limiter le nombre de messages et de retours qu'une même connexion peut envoyer par jour. Ces compteurs s'effacent d'eux-mêmes après quelques jours et ne servent à rien d'autre.</p>
+      </div>
+
+      <h3>✉️ Lettre hebdomadaire du compagnon <span class="badge-share">Envoyé à des tiers</span></h3>
+      <div class="card">
+        <p style="margin-bottom:0;">Si tu as acheté la lettre hebdomadaire, une fois par semaine l'application envoie au fournisseur d'IA un <strong>résumé de ta semaine</strong> pour l'écrire : combien d'entrées tu as écrites dans ton journal, ton émotion la plus fréquente, ton humeur moyenne (de 0 à 5), quelques mots sur les sujets dont tu as le plus parlé, tes sessions de concentration et les points de ta plante. <strong>Le texte de ton journal n'est jamais envoyé.</strong> L'IA n'est utilisée que si tu as donné ton consentement pour la discussion avec l'IA ; sinon, la lettre est écrite dans l'application.</p>
+      </div>
+
+      <h3>🔔 Rappels <span class="badge-share">Seulement sur ton appareil</span></h3>
+      <div class="card">
+        <p style="margin-bottom:0;">Les alertes du Pomodoro, des lettres au futur et le rappel quotidien sont programmés dans ton téléphone. Ils ne passent par aucun serveur.</p>
+      </div>
+
       <h3>💛 SafeSpace+ <span class="badge-share">Achat optionnel</span></h3>
       <div class="card">
-        <p>L'essentiel de Safe Space (journal, tâches, discussion, bouteilles, détection de crise et méditations de base) est toujours gratuit et sans limite. <strong>SafeSpace+</strong> est un abonnement optionnel avec des extras, comme personnaliser ton compagnon de discussion, des notes vocales et des photos dans le journal, et des thèmes et sons supplémentaires.</p>
+        <p>L'essentiel de Safe Space (journal, tâches, discussion, bouteilles, détection de crise et méditations de base) est toujours gratuit. Le chat avec IA a une limite quotidienne généreuse, identique pour tous, pour éviter les abus. <strong>SafeSpace+</strong> est un abonnement optionnel avec des extras, comme personnaliser ton compagnon de discussion, des notes vocales et des photos dans le journal, et des thèmes et sons supplémentaires.</p>
         <p>Tu peux l'essayer gratuitement pendant 7 jours (une seule fois) ; l'essai s'active uniquement sur ton appareil. Les formules payantes (1, 3, 6 ou 12 mois) s'achètent depuis l'application installée via Google Play et sont <strong>prépayées, sans renouvellement automatique</strong>.</p>
+        <p>Il existe aussi des <strong>achats uniques</strong> facultatifs, comme la lettre hebdomadaire du compagnon ou des décors pour ton jardin. Ils se paient via Google Play de la même façon.</p>
         <p style="margin-bottom:0;">Google Play traite le paiement et nous transmet un code d'achat que nous vérifions sur notre serveur pour activer les extras. Nous ne voyons ni ne conservons jamais tes informations de paiement ; c'est Google qui s'en occupe.</p>
       </div>
 
       <h3>🧩 Services techniques</h3>
       <div class="card">
-        <p style="margin-bottom:0;">Cette page et l'application chargent des polices depuis Google Fonts, et nos serveurs fonctionnent sur Cloudflare. Comme pour tout site web, ces services reçoivent des données techniques de connexion (par exemple, ton adresse IP) pour pouvoir livrer le contenu. Nous ne les utilisons pas pour t'identifier ni te suivre.</p>
+        <p style="margin-bottom:0;">Nos serveurs fonctionnent sur Cloudflare. Les polices sont incluses dans l'application, qui ne se connecte donc pas à Google Fonts (cette page web, elle, les charge depuis là). Comme pour tout service en ligne, ces services reçoivent des données techniques de connexion (par exemple, ton adresse IP) pour pouvoir livrer le contenu. Nous ne les utilisons pas pour t'identifier ni te suivre.</p>
       </div>
     </section>
 
@@ -649,6 +710,7 @@ a{color:var(--accent3);}
         <li>Examiner les signalements et retours pour améliorer l'application</li>
         <li>Vérifier les achats SafeSpace+</li>
         <li>Savoir, grâce à des comptages anonymes, si les protections fonctionnent</li>
+        <li>Éviter les abus grâce à des limites d'utilisation de la discussion et des retours</li>
       </ul>
       <p style="margin-bottom:0;">Nous n'utilisons pas tes données pour la publicité, le marketing ni le profilage commercial.</p>
     </section>
@@ -686,6 +748,9 @@ a{color:var(--accent3);}
         <tr><td>Message en bouteille</td><td>Notre serveur, 7 jours</td><td>Public pour les autres utilisateurs, sans ton nom</td></tr>
         <tr><td>Signalements et retours</td><td>Notre serveur</td><td>Seulement avec nous</td></tr>
         <tr><td>Comptages anonymes</td><td>Notre serveur</td><td>Seulement avec nous</td></tr>
+        <tr><td>Identifiant anonyme de l'appareil</td><td>Notre serveur, seulement sous forme de résumé chiffré (hash), quelques jours</td><td>Avec personne</td></tr>
+        <tr><td>Résumé hebdomadaire (lettre du compagnon)</td><td>Pas conservé sur notre serveur</td><td>Avec le fournisseur d'IA, sans le texte de ton journal</td></tr>
+        <tr><td>Rappels</td><td>Seulement ton appareil</td><td>Jamais</td></tr>
         <tr><td>SafeSpace+</td><td>Google Play</td><td>Code d'achat avec notre serveur, jamais tes informations de paiement</td></tr>
       </table>
     </section>
@@ -702,6 +767,7 @@ a{color:var(--accent3);}
         <li>Nous ne montrons pas de publicité</li>
         <li>Nous n'utilisons pas d'outils de suivi ou d'analyse tiers</li>
         <li>Nous ne demandons ni ton e-mail, ni ton téléphone, ni ta localisation</li>
+        <li>Nous n'utilisons pas l'identifiant publicitaire de ton téléphone</li>
         <li>Nous n'envoyons ton journal, tes tâches ni ton historique enregistré vers aucun serveur</li>
       </ul>
     </section>
@@ -721,7 +787,7 @@ a{color:var(--accent3);}
       <h2>🗑️ Comment supprimer tes informations</h2>
       <ul>
         <li><strong>Tout ce qui est sur ton appareil, en une fois :</strong> dans Safe Space, va dans <strong>Paramètres → Supprimer mes données</strong> et confirme. Tu peux aussi effacer les données de l'application depuis les paramètres de ton navigateur ou en la désinstallant.</li>
-        <li><strong>Sauvegardes :</strong> le fichier que tu exportes contient tout ton journal et n'est pas protégé par mot de passe. Garde-le en lieu sûr et supprime-le quand tu n'en as plus besoin.</li>
+        <li><strong>Sauvegardes :</strong> le fichier que tu exportes est enregistré dans le dossier Téléchargements de ton téléphone, contient tout ton journal et n'est pas protégé par mot de passe. Garde-le en lieu sûr et supprime-le quand tu n'en as plus besoin.</li>
         <li><strong>Une bouteille envoyée :</strong> supprimée automatiquement au bout de 7 jours.</li>
         <li><strong>Une bouteille reçue :</strong> tu peux la masquer d'un geste.</li>
       </ul>
@@ -732,7 +798,7 @@ a{color:var(--accent3);}
       <ul>
         <li>Toutes les connexions sont chiffrées (HTTPS).</li>
         <li>Ton mot de passe et ton PIN sont enregistrés protégés, jamais tels quels.</li>
-        <li>Tu peux activer un code PIN pour que personne n'ouvre l'application sans lui.</li>
+        <li>Tu peux activer un code PIN ou ton empreinte pour que personne n'ouvre l'application sans toi. Si tu quittes l'application quelques minutes, elle se verrouille à nouveau toute seule.</li>
         <li>Nos serveurs intermédiaires ne conservent pas tes messages de discussion.</li>
       </ul>
     </section>
